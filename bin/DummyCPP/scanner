@@ -1,0 +1,3 @@
+#Author: Songhui Yue 2014-10-04
+#!/bin/bash
+java Scanner  $*

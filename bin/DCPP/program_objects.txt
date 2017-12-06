@@ -1,0 +1,16 @@
+/*Songhui Yue*/
+
+class node {
+	m;
+	next;
+
+}
+main() {
+	a=node$;
+	b=node$;
+	a.next=b;
+	c=a.next;
+	b.m=19;
+	println(c.m);
+}
+

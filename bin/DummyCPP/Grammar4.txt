@@ -1,0 +1,62 @@
+program : definitionList
+
+definitionList : functionDefinition definitionList 
+					| mainDefinition definitionList 
+					| classDefinition definitionListWithoutEndOfFile 
+					| ε
+
+definitionListWithoutEndOfFile : functionDefinition definitionListWithoutEndOfFile 
+					| mainDefinition definitionListWithoutEndOfFile 
+					| classDefinition definitionListWithoutEndOfFile 
+					| ε
+					
+functionDefinition : VARIABLE OPAREN optExpressionList CPAREN block 
+
+classDefinition : CLASS VARIABLE relationDefinition { basicStatementList definitionList }
+
+relationDefinition : relation VARIABLE | ε
+
+relation : EXTENDS | IMPLEMENTS
+
+block : OPEN_BRACE statementList CLOSE_BRACE
+
+statementList : statement statementList | ε
+
+basicStatementList : basicStatement basicStatementList | ε
+                  
+statement : expression SEMI | ifStatement | basicStatement | whileStatement | returnStatement | printStatement
+               
+expression : primary operator expression | primary
+
+ifStatement : IF OPAREN expression CPAREN block optElse
+optElse : ELSE block | ε 
+
+basicStatement: VARIABLE ASSIGN expression SEMI | printStatement | VARIABLE SEMI
+            
+whileStatement : WHILE OPAREN expression CPAREN block
+
+returnStatement: RETURN optionalExpression ;
+optionalExpression : expression | ε 
+
+printStatement: PRINTLN OPAREN expression CPAREN SEMI
+            
+operator : PLUS | TIMES | MINUS | PLUSPLUS | MINUSMINUS | DIVIDES | MODE | EXCLAMATIONMARK
+			| LESSTHAN | LESSOREQUALTHAN | GREATERTHAN | GREATEROREQUALTHAN
+			| ASSIGN | EQUALEQUAL | NOTEQUAL
+            
+primary : NUMBER
+            | true | false | STRING
+            | OPAREN expression CPAREN
+            | VARIABLE MorePrimary 
+            
+morePrimary : arrayAccess | fieldAccess | functionCall | ε
+            
+arrayAccess :  [ expression ] morePrimary 
+
+fieldAccess : . VARIABLE morePrimary 
+
+functionCall : OPAREN optExpressionList CPAREN morePrimary
+
+optExpressionList : expression moreExpressions | ε
+
+moreExpressions : , expression moreExpressions | ε

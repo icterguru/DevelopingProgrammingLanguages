@@ -1,0 +1,46 @@
+MokterHossain:~ Dr.Mokter$ cd LiMp
+
+MokterHossain:LiMp Dr.Mokter$ ls
+build		dist		nbproject	src
+build.xml	manifest.mf	source
+
+MokterHossain:LiMp Dr.Mokter$ cd source
+
+MokterHossain:source Dr.Mokter$ ls
+Environment.java		functions.txt
+Interpreter.java		iteration.txt
+Lexeme.java			lists.txt
+Lexer.java			makefile
+LiMp.java			mjwalker3@crimson.ua.edu
+Parser.java			program.txt
+README				recursion.txt
+Types.java			rpn.txt
+conditionals.txt		scanner
+
+
+MokterHossain:source Dr.Mokter$ make
+
+OR
+
+MokterHossain:source Dr.Mokter$ make clean
+rm -frv *.class
+Environment.class
+Interpreter.class
+Lexeme.class
+Lexer.class
+LiMp.class
+Parser.class
+Types.class
+
+MokterHossain:source Dr.Mokter$ make
+javac   -encoding UTF-8  Types.java
+javac   -encoding UTF-8  Lexeme.java
+javac   -encoding UTF-8  Lexer.java
+javac   -encoding UTF-8  Parser.java
+javac   -encoding UTF-8  Environment.java
+javac   -encoding UTF-8  Interpreter.java
+javac   -encoding UTF-8  LiMp.java
+
+MokterHossain:source Dr.Mokter$ make run
+java  LiMp rpn.txt
+23

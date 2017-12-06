@@ -1,0 +1,8 @@
+/*Songhui Yue*/
+
+main() {
+	f=3+4+(5*6)+(77/7)-50; //7+30+11-50=-2
+
+	println("f should be -2 and it is: "+ f);
+}
+

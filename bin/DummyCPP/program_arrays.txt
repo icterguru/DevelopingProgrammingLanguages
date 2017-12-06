@@ -1,0 +1,9 @@
+/*Songhui Yue*/
+
+main() {
+	a[9]=99;
+	a[1]=11;
+
+	println("a[1] should be 11 and it is: "+a[1]);
+	println("a[9] should be 99 and it is: "+a[9]);
+}

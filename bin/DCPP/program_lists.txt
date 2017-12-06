@@ -1,0 +1,54 @@
+/*Songhui Yue*/
+
+class node {
+	data;
+	next;
+
+}
+
+class stack{
+	header;
+	
+}
+main() {
+
+	//hard code a stack using object
+	a=node$;
+	b=node$;
+	c=node$;
+	d=node$;
+	e=node$;
+	f=node$;
+	g=node$;
+	g.data=7;
+	f.data=6;
+	e.data=5;
+	d.data=4;
+	c.data=3;
+	b.data=2;
+	a.data=1;
+	
+	a.next=b;
+	b.next=c;
+	c.next=d;
+	d.next=e;
+	e.next=f;
+	f.next=g;
+	
+	//t=a;
+	t=a.next;
+	println("next ts data is: "+t.data);
+	t=t.next;
+	println("next ts data is: "+t.data);
+	t=t.next;
+	println("next ts data is: "+t.data);
+	t=t.next;
+	println("next ts data is: "+t.data);
+	t=t.next;
+	println("next ts data is: "+t.data);
+	t=t.next;
+	println("next ts data is: "+t.data);
+	
+	
+}
+

@@ -1,0 +1,21 @@
+/*Songhui Yue*/
+
+
+function1(x){
+	x=x*5;
+}
+
+function2(f){
+	x=6;
+	f(x);
+}
+
+
+main() {
+
+	firstclass = function2(function1);
+	println(firstclass);
+	
+	
+}
+

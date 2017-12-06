@@ -1,0 +1,9 @@
+; Michael Walker
+; mjwalker3@crimson.ua.edu
+
+function main()
+    print(2+3*5+6);
+    print("\n")
+end
+
+main()

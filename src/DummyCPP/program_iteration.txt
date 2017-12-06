@@ -1,0 +1,16 @@
+/*Songhui Yue*/
+
+a(x) {
+
+while(x>80){
+	x=x-1;
+}
+
+}
+
+main() {
+	c=100;
+	f=a(c); //f is 80
+	println("f should be 80 and it is: "+f);
+}
+

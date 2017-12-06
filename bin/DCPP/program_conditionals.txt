@@ -1,0 +1,17 @@
+/*Songhui Yue*/
+
+a(x, y) {
+
+if(x>10){
+	y=100;
+}else{
+	y=300;
+}
+
+}
+
+main() {
+	f=a(11,0); //f is 100
+	println("f should be 100 and it is: "+ f);
+}
+

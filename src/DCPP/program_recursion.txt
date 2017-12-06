@@ -1,0 +1,17 @@
+/*Songhui Yue*/
+
+
+j(m){
+	if(m>0){
+		m+j(m-1);
+	}else{
+		0;
+	}
+		
+}
+
+
+main() {
+	f=j(5); //f is 15
+	println("f should be 15 and it is : "+f);
+}
